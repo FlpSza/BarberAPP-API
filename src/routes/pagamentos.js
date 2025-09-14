@@ -354,6 +354,7 @@ router.patch('/marcar-pago/:id', [
     }
 
     await calculo.update({
+      pago: true,
       dataPagamento: req.body.dataPagamento,
       observacoes: req.body.observacoes || calculo.observacoes
     });
